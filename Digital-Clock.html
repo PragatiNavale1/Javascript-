@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rollover- DIGITAL CLOCK</title>
+</head>
+<body>
+	<div id="p"></div>
+
+</body>
+<script type="text/javascript">
+	setInterval(setTime,1000);
+
+	function setTime()
+	{
+		var now=new Date();
+		var hour=now.getHours();
+		var min=now.getMinutes();
+		var sec=now.getSecond();
+
+		if (sec < 10)
+		{
+			sec="0"+sec;
+		}
+		if (min < 10) 
+		{
+			min="0"+min;
+		}
+		if (hour < 10) 
+		{
+			hour="0"+hour;
+		}
+		var ap;
+		if(hour < 12)
+		{
+			ap="AM";
+		}
+		else
+		{
+			ap="PM";
+		}
+
+		document.getElementById('p').innerHTML="<br><h3><font color="green">" + hour + "</font> : " + min + " : " + sec + " " + ap + "</h3>";
+	}
+</script>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DISABLING ELEMENTS</title>
+</head>
+<body><center>
+	<input type="button" id="btn1" value="Change state" onclick="disabledEx()"><br><br>
+
+	Enter your name :
+	<input type="text" id="name" disabled="disabled" onkeyup="disabledEx1()"> <br><br>
+	<input type="button" id="btn2" value="SUBMIT" onclick="disabledEx1()">
+</center>
+</body>
+<script type="text/javascript">
+
+	document.getElementById("name").disabled=true;
+	document.getElementById("btn2").disabled=true;
+	    
+	function disabledEx()
+	{
+		document.getElementById("name").disabled=false;    	
+	} 
+	function disabledEx1()
+	{
+		document.getElementById("btn2").disabled=false;    	
+	}     
+	
+</script>
+</html>

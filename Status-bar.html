@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Status Bar </title>
+</head>
+<body>
+	<h5> Rollover on the given image to change the styles of the image. </h5>
+	<img src="IMAGES/Bhimashankar.png" id="demo" name="demo">
+
+	<script type="text/javascript">
+		let demoImage=document.getElementById("demo");
+
+		demoImage.onmouseover=function(){
+			window.status="Entered !!";
+		};
+		demoImage.onmouseoout=function(){
+			window.status="Exited !!";
+		};
+	</script>
+</body>
+</html>

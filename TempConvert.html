@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+Enter Temprature:
+<input type="text" name="" id="cf"><br><br>
+<input type="button" value="Convert to Celsius" id="c" onclick="celsius()">
+<input type="button" value="Convert to Fehrenheit" id="f" onclick="fehrenheit()">
+<script>
+	
+function celsius(){
+var temp=document.getElementById("cf").value;
+var c=[(temp-32)*5]/9;
+document.write(temp +" F is "+c+" C");
+}
+
+function fehrenheit(){
+var temp=document.getElementById("cf").value;
+var f=temp*(9/5)+32;
+document.write(temp +" C is "+f+" F");
+}
+</script>
+</body>
+</html>

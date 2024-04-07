@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>
+    	Multidimentional Array
+    	Students Information
+
+    </title>
+</head>
+<body>
+    <script>
+        var rows=10;
+        var cols=4;
+        var student=new Array(rows);
+        for(var i=0;i<rows;i++) {
+            student[i]= new Array(cols);
+        }
+        for(var i in student) {
+        	alert("Enter data " +i+ " Number Student" );
+		
+            for(var j in i) {
+                    student[i][0] = prompt("Enter Name:");
+
+                    student[i][1] = prompt("Enter Age:");
+                
+                    student[i][2] = prompt("Enter Class:");
+                 
+                    student[i][3] = prompt("Enter Percentage:");  
+            }
+        }
+        document.write("<table border=1>");
+        document.write("<tr><td>Name</td><td>Age</td><td>Class</td><td>Percentage</td></tr>");
+        for(var x of student) {
+            document.write("<tr>");
+            for(var y of x) {
+                document.write("<td>"+y+"</td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+        document.write("<br>");
+        document.write("<table border=1>");
+        document.write("<tr><td>Name</td><td>Age</td><td>Class</td><td>Percentage</td></tr>");
+        for(var a of student) {
+            document.write("<tr>");
+            for(var b of a) {
+                if(a[1]>18 && a[3]>=60) {
+                    if(a[2]=="TYCM" ||a[2]=="tycm") {
+                        document.write("<td bgcolor='pink'>"+b+"</td>");
+                    }
+                    else {
+                        document.write("<td>"+b+"</td>");
+                    }
+                }
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+    </script>
+</body>
+</html>

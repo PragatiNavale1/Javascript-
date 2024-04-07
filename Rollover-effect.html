@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rollover-Effect to Enlarge Image by 125 Pixels</title>
+</head>
+<body>
+	<img src="IMAGES/Bhimashankar.png" id="image" width="400" height="400"
+	 onmouseover="change()" onmouseout="restore()">
+
+</body>
+<script type="text/javascript">
+
+		var i=document.getElementById("image");
+
+		function change()
+		{
+			i.width=525;
+			i.height=525;
+
+			
+		}
+		function restore()
+		{
+			i.src="IMAGES/Bhimashankar.png";
+	    }
+
+	</script>
+</html>

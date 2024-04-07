@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Multidimentioal Array Task</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var rows=3;
+		var cols=4;
+		var student=new Array(rows);
+		for(var i=0 ; i < rows ; i++){
+			student[i]=new Array(cols);
+		}
+		for (var i = 0; i< rows; i++) {
+			alert("Enter data " +i+ " Number Student" );
+		
+			for (var j = 0; j< cols; j++) {
+				if(j==0)
+					student[i][j]=prompt("Enter Name: ");
+				if(j==1)
+					student[i][j]=prompt("Enter Age: ");
+				if(j==2)
+					student[i][j]=prompt("Enter Class: ");
+				if(j==3)
+					student[i][j]=prompt("Enter Percentage: ");
+				
+			}
+		}
+		
+		document.write("Student Records: ");
+		document.write("<table border=1>");
+		document.write("<tr><td>NAME</td><td>AGE</td><td>CLASS</td><td>PERCENTAGE</td></tr>");
+		for(var x of student){
+			document.write("<br>");
+			document.write("<tr>");
+			for (var y of x) {
+				document.write("<td>"+y+"</td>");
+			}
+			document.write("</tr>");
+		}
+		document.write("</table>");
+		document.write("<br>");
+		
+
+		document.write("Student having age above 18 and have got above 90");
+		document.write("<table border=1>");
+		document.write("<tr><td>NAME</td><td>AGE</td><td>CLASS</td><td>PERCENTAGE</td></tr>");
+		for(var x=0; x<student.length; x++){
+			document.write("<br>");
+			document.write("<tr>");
+			for (var y =0; y<student[x].length; y++) {
+				if (student[x][2] >= 18 && student[x][3] >=90)
+					document.write("<td>"+student [x][y]+"</td>");
+				
+			}
+		    document.write("</tr>");
+		}
+		document.write("</table>");		
+	</script>
+
+</body>
+</html>

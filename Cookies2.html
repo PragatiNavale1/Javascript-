@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COOKIES SETTINGS (prac 10) Setting a Cookies Expiry Date</title>
+<script type="text/javascript">
+	 function WriteCookie()
+	 {
+	 	var now=new Date();
+	 	now.setMonth(now.getMonth()+1);
+	    cookievalue=escape(document.myform.customer.value)+";";
+	    document.cookie="name="+cookievalue;
+	    document.cookie="Expire="+now.toUTCString()+";";
+	    
+	    document.write("Setting Cookies:"+" Name= "+cookievalue);
+	
+	}
+    </script>
+</head>
+<body>
+	<form name="myform" action="">
+		Enter Name : <input type="text" name="customer">
+		<input type="button" value="Set Cookie" onclick="WriteCookie()">
+	</form>
+</body>
+</html>

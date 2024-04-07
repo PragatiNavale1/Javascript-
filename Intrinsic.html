@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>INTRINSIC FUNCTIONS(Practical 09)</title>
+</head>
+<body>
+	<form name="myForm">
+		Username: <input type="text" name="name" id="name"><br><br>
+		<input type="button" value="Disable Name Field" id="btn1" onclick="DisableFunction()"><br><br>
+		<input type="button" value="Enable Name Field" id="btn2" onclick="EnableFunction()"><br><br>
+		
+	</form>
+</body>
+<script type="text/javascript">
+
+	document.getElementById("name").disabled=true;
+	
+	function EnableFunction(){
+		document.getElementById("name").disabled=false;
+	}
+	function DisableFunction(){
+		document.getElementById("name").disabled=false;
+	}
+</script>
+</html>

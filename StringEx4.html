@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Sort the strings of a given array of strings in the order of increasing lengths.</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function sort_by_string_length(arra) {
+	        for (var i = 0; i < arra.length; i++) {
+		        for (var j = i + 1; j < arra.length; j++) {
+			        if (arra[i].length > arra[j].length) {
+				        var m = arra[i];
+				        arra[i] = arra[j];
+				        arra[j] = m;
+			        }
+		        }
+	        }
+	        return arra;
+        }
+
+    var arra = ["xyz","acd","aa","bb","zzz","", "a","b"];
+    document.write("Original array: "+ arra+"\n");
+    document.write("<hr>Order of Increasing Lengths: ")
+    document.write(sort_by_string_length(["xyz","acd","aa","bb","zzz","", "a","b"]));
+</script>
+
+</body>
+</html>

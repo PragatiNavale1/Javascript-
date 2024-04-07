@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting Value From Form Controls</title>
+
+	<script type="text/javascript">
+		
+		function testResults(Form){
+			var var1 = Form.num1.value;
+			var var2 = Form.num2.value;
+			var result;
+			var operator = Form.button.value;
+			if (operator == '+') {
+				result= num1 + num2;
+			} else if(operator == '-') {
+				result= num1 - num2;
+			}else if(operator == '*') {
+				result= num1 * num2;
+			}else{
+				result= num1 / num2;
+			}
+			alert("Answer is: " +result);
+		}
+	</script>
+	</head>
+
+	<body>
+		<form name="myForm" action="" method="GET"><br>
+			Enter First Number: 
+			<input type="text" name="num1" value=""><p>
+				Enter Second Number:
+				<input type="text" name="num1" value=""><p>
+					<input type="button" name="button" value="ADD" onclick="testResults(this.Form)">
+					<input type="button" name="button" value="SUB" onclick="testResults(this.Form)">
+					<input type="button" name="button" value="MUL" onclick="testResults(this.Form)">
+					<input type="button" name="button" value="DIV" onclick="testResults(this.Form)">
+		</form>
+    </body>
+</html>

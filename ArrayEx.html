@@ -1,0 +1,21 @@
+<html>
+<head>
+<title>JavaScript program to test whether an array of integers of length 2 contains 1 or a 3.</title>
+</head>
+<body>
+<script>
+function contains13(nums) {
+if (nums.indexOf(1) != -1 || nums.indexOf(3) != -1){
+return true
+}
+else
+{
+return false
+}
+}
+document.write("<br>"+contains13([1, 5]));
+document.write("<br>"+contains13([2, 3]));
+document.write("<br>"+contains13([7, 5]));
+</script>
+</body>
+</html>

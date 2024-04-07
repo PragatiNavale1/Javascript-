@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Mouse Events (onmouseout and onmouseover)</title>
+</head>
+<body>
+<p onmouseover="over1()" onmouseout="over2()">VISITED THE PARAGRAPH !!</p>
+<br>
+<p id='p'></p>
+</body>
+<script type="text/javascript">
+	function over1(){
+		document.getElementById('p').innerHTML="<h3>You have Visited the paragraph !!</h3>";
+	}
+	function over2(){
+		document.getElementById('p').innerHTML="<h3>You have Left the paragraph !!</h3>";
+	}
+</script>
+</html>

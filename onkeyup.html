@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyboard Events (onkeyup)</title>
+</head>
+<body>
+	<center>NUMBER KEY PRESSED</center>
+	<form name="myform" method="get">
+	    ENTER YOUR NAME :
+	        <input type="text" name="inputbox" onkeyup="down(this.form)">
+            <br>
+            <p id='p'></p>
+    </form>
+</body>
+
+<script type="text/javascript">
+	var arr=1;
+
+	function down(form){
+		arr=form.inputbox.value;
+		for(var i=0;i<arr.length;i++){
+		    document.getElementById('p').innerHTML="<h5>" + arr[i] + " KEY PRESSED !!"
+		}
+	}
+	
+</script>
+</html>

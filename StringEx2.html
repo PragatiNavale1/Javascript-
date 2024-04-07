@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>String Example (TASK)</title>
+</head>
+<!--nOT WORKING PROPERLY-->
+<body>
+	<script type="text/javascript">
+		var sentence=prompt("Enter a Sentence: ");
+		var new_Sentence=[];
+		new_Sentence=sentence.split(/[aeiou]/ig);
+
+		document.write("<b>" + "String Is: " + "</b>" +sentence);
+		document.write("<hr><b>" + "Words starts with Vowels: " + "</b>");
+		for(var x of new_Sentence)
+		{
+			document.write("<br>" +x);
+		}
+		 
+
+		 var rever_Values=new_Sentence.reverse();
+		var rever_senten=rever_Values.join('');
+
+		if (sentence == rever_senten) {
+			document.write("<br>" +"Palindrom Words: " +x);
+		} else {
+
+			}
+// udit is an extraordinary student or singer madam dad kaka
+
+
+
+		//Soft Hearted With Little Fire In My Heart !!
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

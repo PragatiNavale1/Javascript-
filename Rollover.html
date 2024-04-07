@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Image by Rollover</title>
+</head>
+<body><center>
+	<img src="IMAGES/Pachagani.png" width="400" height="400" id="image" 
+	onmouseover="change()" onmouseout="restore()">
+	</center>
+</body>
+<script type="text/javascript">
+	
+	var i=document.getElementById("image");
+	function change()
+	{
+		
+		i.src="IMAGES/Matheran.png";
+		
+	}
+	function restore()
+	{
+		
+		i.src="IMAGES/Pachagani.png";
+		
+	}
+</script>
+</html>

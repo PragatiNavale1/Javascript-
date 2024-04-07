@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Keyboard Events (onkeydown)</title>
+</head>
+<body>
+	<center>NUMBER KEY PRESSED</center>
+	ENTER YOUR NAME :
+	<input type="text" name="inputbox" id="inputbox" onkeydown="down()">
+        <br>
+        <p id='p'></p>
+</body>
+
+<script type="text/javascript">
+	var num=1;
+
+	function down(){
+		document.getElementById('p').innerHTML=num + " Number key Pressed !!";
+		num++;
+	}
+	
+</script>
+</html>

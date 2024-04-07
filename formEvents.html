@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FORM EVENTS (onfocus and onblur and onchange)</title>
+</head>
+<body>
+	<h3 id='t'> ENTER YOUR NAME : </h3>
+	<input type="text" id="name" onfocus="event1()" onblur="event2()" onchange="event3()"  onsubmit="event4()">
+       
+</body>
+
+<script type="text/javascript">
+	function event1(){
+		document.getElementById("inputbox").style.background="orange";
+	}
+	function event2(){
+		document.getElementById("inputbox").style.background="aqua";
+	}
+	function event3(){
+		document.getElementById('t').style.background="red";
+	}
+	function event4(){
+		var x=document.getElementById('inputbox');
+		x.value=x.value.charAt(0).toLowerCase().concat(x.value.slice(1).touppercase);
+	}
+</script>
+</html>

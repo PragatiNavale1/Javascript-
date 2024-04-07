@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+		<img src="IMAGES/Matheran1.png" id="image" width="400" height="400"><br><br>
+		<input type="button" name="" value="Previous" onclick="previous(this.index)">
+	    <input type="button" name="" value="Next" onclick="next(this.index)">
+	
+	</center>
+
+</body>
+<script type="text/javascript">
+	var image_arr=new Array("IMAGES/Matheran1.png","IMAGES/Bhimashankar.png","IMAGES/Lonavala.png","IMAGES/Mahabaleshwar.png","IMAGES/Pachagani.png","IMAGES/Matheran.png");
+	var i=document.getElementById("image");
+	var j=0;
+
+	function previous(index)
+	{
+		j=j+index;
+		if(j<0)
+		{
+			j=image_arr.length-1;			
+		}
+		i.src=image_arr[j];
+
+	}
+
+	function next(index)
+	{
+		j=j+index;
+		if(j>image_arr.length-1)
+		{
+			j=0;		
+		}
+		i.src=image_arr[j];
+
+	}
+</script>
+</html>

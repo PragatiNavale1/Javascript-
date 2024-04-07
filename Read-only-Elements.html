@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>READ ONLY ELEMENTS(Practical 09)</title>
+</head>
+<body>
+	<textarea id="myText" rows="3" readonly="readonly">Change the text!</textarea><br>
+	<button onclick="changeState()">Change Me</button>
+
+</body>
+<script type="text/javascript">
+	function changeState()
+	{
+		var textarea=document.getElementById("myText");
+		textarea.readOnly = !textarea.readOnly;
+	}     
+	
+</script>
+</html>

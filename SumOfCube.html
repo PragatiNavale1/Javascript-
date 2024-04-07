@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>compute the sum of cubes of all integer from 1 to a given integer</title>
+</head>
+<body>
+	<script type="text/javascript">
+		function sum_Of_Cubes(n) {
+  var sumn = 0;
+
+  for (var i = 1; i <= n; i++) {
+    sumn += i ** 3;
+  }
+  return sumn;
+}
+
+document.write(sum_Of_Cubes(3));
+document.write("<br>"+sum_Of_Cubes(7));
+
+	</script>
+
+</body>
+</html>

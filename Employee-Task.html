@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TASK OF VALIDATIONS</title>
+</head>
+<body><center>
+	<h2>EMPLOYEE INFORMATION</h2>
+	<form><pre>
+		<b>EMPLOYEE ID :</b>
+		    <input type="text" id="emp_id"><br>
+		<b>EMPLOYEE NAME :</b>
+		    <input type="text" id="emp_name"><br>
+		<b>EMPLOYEE DESIGNATION :</b>
+		    <input type="text" id="emp_desg"><br>
+		<b>EMPLOYEE MOBILE :</b>
+		    <input type="text" id="emp_mob"><br>
+		    <input type="button" id="btn" value="Register" onclick="register(this.form),AddRow()"><br>
+		    <input type="reset" name="reset" value="Reset">
+	        <br><br>
+		    <p id="p"></p></pre>
+	</form>
+	<hr>
+<!--Information in the Table -->
+	
+	<table border ="4" id="show">
+		<thead>
+			<tr>
+				
+				<th>Employee Id</th>
+				<th>Employee Email</th>
+			</tr>
+		</thead>
+		
+	</table>
+</center>
+
+	<script type="text/javascript">
+
+//Table adding ROWS and COLS
+	    var list1 =[];
+		var list2 =[];
+		var n =1;
+		var x=0;
+		var i=id.value;
+		var email= i+name.value.substring(0,2)+"@infy.org.in";
+			
+		 function AddRow(){
+		 	var AddRown = document.getElementById('show');
+		 	var NewRow =AddRown.insertRow(n);
+
+		 	list1[x]=document.getElementById(i);
+		 	list2[x]=document.getElementById(email);
+		 	
+		 	var cel1 = NewRow.insertCell(0);
+            var cel2 = NewRow.insertCell(1);
+            
+            cel1.innerHTML = list1[x];
+            cel2.innerHTML = list2[x];
+            
+            n++;
+            x++;  
+		 }
+
+
+		function register(form) {
+
+//Validations			
+			var id=document.getElementById('emp_id');
+			var name=document.getElementById('emp_name');
+			var desg=document.getElementById('emp_desg');
+			var mob=document.getElementById('emp_mob');
+			if(id.value =="" || name.value =="" || desg.value == "" || mob.value =="")
+			{
+				alert("Fill All The Details");
+				return;
+			}
+
+//Validation for emp_id			
+
+			if(id.value.length >= 4) 
+			{
+				for(j=0; j<id.value.length; j++)
+				{
+					if(id.value.charAt(j)>='0' && id.value.charAt(j)<='9')
+					{
+						//...
+					}
+					else
+					{
+						alert("Employee ID should in numbers !!");
+						return;
+					}
+				}
+			}else{
+				alert("Employee ID Should be Minimum 4 Numbers !!")
+			}
+
+//Validation for emp_name			
+
+			if(name.value.length >=6) 
+			{
+				for(j=0; j<name.value.length; j++)
+				{
+					if(name.value.charAt(j)>='a' && name.value.charAt(j)<='z' || 
+						name.value.charAt(j)>='A' && name.value.charAt(j)<='Z')
+					{	
+						//....
+					}else
+					{
+						alert("Employee Name should be Characters !!");
+						return;
+					}
+				}
+			}else{
+				alert("Employee Name Should be Minimum 6 Charactes !!")
+			}
+
+//Validation for emp_desg
+
+			if(desg.value.length >=10) 
+			{
+				for(j=0; j<desg.value.length; j++)
+				{
+					if(desg.value.charAt(j)>='a' && desg.value.charAt(j)<='z' || 
+						desg.value.charAt(j)>='A' && desg.value.charAt(j)<='Z')
+					{	
+						//....
+					}else
+					{
+						alert("Employee Designation should be Characters !!");
+						return;
+					}
+				}
+			}else{
+				alert("Employee Designation Should be Minimum 10 Characters !!")
+			}
+
+//Validation for emp_mob
+
+			if(mob.value.length >= 9) 
+			{
+				for(j=0; j<mob.value.length; j++)
+				{
+					if(mob.value.charAt(j)>='0' && mob.value.charAt(j)<='9')
+					{
+						//...
+					}
+					else
+					{
+						alert("Employee Mobile Number should be numbers !!");
+						return;
+					}
+				}
+			}else{
+				alert("Employee Mobile Should be 10 Digits !!")
+			}
+
+
+			id.style.background="orange";
+			name.style.background="orange";
+			desg.style.background="orange";
+			mob.style.background="orange";
+	}
+
+//End of Validations			
+		
+	</script>
+
+</body>
+</center>
+</html>

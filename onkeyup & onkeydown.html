@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Onkeyup and onkeydown events</title>
+	<script type="text/javascript">
+		function callMe(){
+
+			document.getElementById("fname").style.background="green";
+			var x=document.getElementById("fname");
+			x.value=x.value.toUpperCase();
+        }
+        function callMe1(){
+        	var y=document.getElementById("lname");
+			y.value=y.value.toUpperCase();
+			document.getElementById("lname").style.background="aqua";
+		
+        }
+			
+		
+	</script>
+</head>
+<body>
+	First Name :<input type="text" id="fname" placeholder="onkeydown" onkeydown="callMe()">
+    Last Name :<input type="text" id="lname" placeholder="Onkeyup"  onkeyup="callMe1()">
+    <input type="submit" name="submit">
+    
+</body>
+</html>

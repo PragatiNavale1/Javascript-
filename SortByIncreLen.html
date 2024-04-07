@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array of strings in the order of increasing lengths</title>
+</head>
+<body>
+
+<script>
+ 
+// Function to check the small string
+function compare(s1, s2) {
+    return s1.length - s2.length;
+}
+ 
+// Function to print the sorted array of string
+function printArraystring(str, n) {
+    for (let i = 0; i < n; i++)
+        document.write(str[i] + " ");
+}
+ 
+// Driver function
+let arr = ["Sanjivani", "I","Kopargaon", "from", "am"]
+let n = arr.length
+ 
+// Function to perform sorting
+arr.sort(compare);
+ 
+// Calling the function to print result
+printArraystring(arr, n);
+
+</script>
+</body>
+</html>

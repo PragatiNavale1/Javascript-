@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	 <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+		Student Information
+	</title>
+</head>
+<body>
+<form action="" id="abc">
+		
+	<center>
+	First Name 	: <input type="text" name="fName"><br><br>
+	Middle Name : <input type="text" name="mName"><br><br>
+	Last Name 	: <input type="text" name="lName"><br><br>
+	Gender		: <input type="radio" name="gen" value="Male">Male
+				  <input type="radio" name="gen" value="Female">Female
+				  <br><br>
+	Subjects	: <input type="checkbox" name="sub" value="CSS">CSS
+				  <input type="checkbox" name="sub" value="AJP">AJP
+				  <input type="checkbox" name="sub" value="ACN">ACN
+				  <input type="checkbox" name="sub" value="ADBMS">ADBMS
+				  <input type="checkbox" name="sub" value="EST">EST
+				  <input type="checkbox" name="sub" value="STE">STE
+	<br>
+	<h4>Address	: 
+	<textarea name="address" cols="20" rows="5" placeholder="ENTER ADDRESS"></textarea></h4>
+	<br><br>
+	City		:
+	<select name="city">
+		<option>Kopargaon</option>
+		<option>Sangamner</option>
+		<option>Nashik</option>
+		<option>Yeola</option>
+	</select>
+	<br><br>
+	District	:
+	<select name="dist">
+		<option>Ahmednagar</option>
+		<option>Pune</option>
+		<option>Nasik</option>
+		<option>Aurangabad</option>
+	</select>
+	<br>
+	<br>
+	<input type="button" name="submit" value="Submit" onclick="dataRead(this.form)">
+
+	<input type="reset" name="reset" value="Reset">
+</center>
+</form>
+</body>
+<script type="text/javascript">
+	var n=1;
+	var x=0;
+	function dataRead(form)
+	{
+
+		var addrows=document.getElementById("show");
+		var newrow=addrows.insertRow(n);
+
+
+		var cel1=newrow.insertcell(0);
+		var cel2=newrow.insertcell(1);
+		var cel3=newrow.insertcell(2);
+		var cel4=newrow.insertcell(3);
+		var cel5=newrow.insertcell(4);
+		var cel6=newrow.insertcell(5);
+
+		cel1.innerHTML=getElementById("fName").value;
+		cel2.innerHTML=getElementById("mName").value;
+		cel3.innerHTML=getElementById("lName").value;
+		cel4.innerHTML=getElementById("gen").value;
+		cel5.innerHTML=getElementById("sub").value;
+		cel6.innerHTML=getElementById("stud_add").value;
+		n++;
+		var rr=document.getelementById(abc.reset());
+	}
+
+</script>
+</html>

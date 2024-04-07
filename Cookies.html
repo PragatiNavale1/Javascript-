@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>COOKIES SETTINGS (prac 10) Storing Cookies</title>
+<script type="text/javascript">
+	 function WriteCookie()
+	 {
+	    if(document.myform.customer.value == "")
+	    {
+            alert("Enter Some Value!!");
+            return;
+	    }
+	    cookievalue=escape(document.myform.customer.value)+";";
+	    document.cookie="name="+cookievalue;
+	    document.write("Setting Cookies:"+" Name= "+cookievalue);
+	}
+    </script>
+</head>
+<body>
+	<form name="myform">
+		Enter name: <input type="text" name="customer">
+		<input type="button" value="Set Cookie" onclick="WriteCookie()";>
+	</form>
+</body>
+</html>

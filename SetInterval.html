@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SET INTERVAL METHOD</title>
+</head>
+<body>
+	<textarea id="d" cols="40" rows="5"></textarea>
+
+</body>
+<script type="text/javascript">
+	var i=document.getElementById('d');
+	var a,b;
+	a=setInterval(fun,3000);
+	b=setInterval(fun1,6000);
+	function fun(){
+		i.style.background="green";
+	}
+	function fun1(){
+		i.style.background="aqua";
+	}
+	
+</script>
+</html>

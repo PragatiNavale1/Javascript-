@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<center>
+	    <form>
+	    	<h3>FILL THE INFORMATION</h3>
+
+	    	FIRST NAVALE : <input type="text" id="fname" value=" "  
+	    	                onkeyup="l1()"> <p>
+	    	LAST NAME :    <input type="text" id="lname" value=" " 
+	                        onkeyup="s1()"> <p>
+	        SUBJECT :      <select id="sub" onclick="g1()">
+	        	               <option value="pci">PCI</option>
+	        	               <option value="c++">C++</option>
+	        	               <option value="dbms">DBMS</option>
+	        	               <option value="java">JAVA</option>
+	        	               <option value="mic">MIC</option>
+	        	               <option value="sen">SEN</option>
+	                       </select>           <p>                  	
+	                       <p>	
+	        GENDER :       <input type="radio" name="gender" id="gen" onclick="b1()">  Male    
+	                        <input type="radio" name="gender" id="gen1" onclick="b1()"> Female </p>
+
+	                        <input type="button" id="btn" value="SUBMIT" onclick="show()">
+
+    </center>
+        </form>
+</body>
+
+	<script type="text/javascript">
+		
+		document.getElementById("fname").disabled=false;
+	    document.getElementById("lname").disabled=true;
+	    document.getElementById("sub").disabled=true;
+	    document.getElementById("gen").disabled=true;
+	    document.getElementById("gen1").disabled=true;
+	    document.getElementById("btn").disabled=true;
+
+	    function l1(){
+	    	document.getElementById("lname").disabled=false;
+	    	}
+	     function s1(){
+	    	document.getElementById("sub").disabled=false;
+	    	
+	    }
+	     function g1(){
+	    	document.getElementById("gen").disabled=false;
+	    	document.getElementById("gen1").disabled=false;
+	    	
+	    }
+	     function b1(){
+	    	document.getElementById("btn").disabled=false;
+	    }
+	     function show(){
+	     	document.write("<h3> WELCOME </h3><h2>" + fname.value.toUpperCase() +" "+
+	     		lname.value.toUpperCase() +"</h2>");
+	     }
+	</script>
+
+</html>
+

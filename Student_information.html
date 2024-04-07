@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>
+		Student Information
+	</title>
+	<!--ONLY INFORMATION WILL BE DISPLAYED !!-->
+</head>
+<body>
+<form>
+	<center>
+	First Name 	: <input type="text" name="fName"><br><br>
+	Middle Name : <input type="text" name="mName"><br><br>
+	Last Name 	: <input type="text" name="lName"><br><br>
+	Gender		: <input type="radio" name="gen" value="Male">Male
+				  <input type="radio" name="gen" value="Female">Female
+				  <br><br>
+	Subjects	: <input type="checkbox" name="sub" value="CSS">CSS
+				  <input type="checkbox" name="sub" value="AJP">AJP
+				  <input type="checkbox" name="sub" value="ACN">ACN
+				  <input type="checkbox" name="sub" value="ADBMS">ADBMS
+				  <input type="checkbox" name="sub" value="EST">EST
+				  <input type="checkbox" name="sub" value="STE">STE
+	<br>
+	<h4>Address	: 
+	<textarea name="address" cols="20" rows="5"></textarea></h4>
+	<br><br>
+	City		:
+	<select name="city">
+		<option>Kopargaon</option>
+		<option>Sangamner</option>
+		<option>Nasik</option>
+		<option>Yeola</option>
+	</select>
+	<br><br>
+	District	:
+	<select name="dist">
+		<option>Ahmednagar</option>
+		<option>Pune</option>
+		<option>Nasik</option>
+		<option>Aurangabad</option>
+	</select>
+	<br>
+	<br>
+	<input type="button" name="submit" value="Submit" onclick="dataRead(this.form)">
+
+	<input type="reset" name="reset" value="Reset">
+</center>
+</form>
+</body>
+<script type="text/javascript">
+	function dataRead(form)
+	{
+			var gen;
+			var address="";
+			var city, dist,ci, di;
+			var sub = [];
+			var fname = form.fName.value;
+			var mName = form .mName.value;
+			var lName = form.lName.value;
+			for(var i=0; i<form.gen.length; i++) {
+				if(form.gen[i].checked) {
+						gen = form.gen[i].value;
+				}
+			}
+			for(var j = 0; j<form.sub.length; j++) {
+				if(form.sub[j].checked) {
+					sub[j] = form.sub[j].value;
+				}
+			}
+			address = form.address.value;
+			ci= form.city.selectedIndex;
+			di = form.city.selectedIndex;
+			city = form.city[ci].value;
+			dist = form.dist[di].value;
+			document.write("Name: "+fname+" "+mName+" "+lName+"<br>");
+			document.write("Gender: "+gen+"<br>");
+			document.write("Address: "+address+"<br>");
+			document.write("Subjects: "+sub+"<br>");
+			document.write("City: "+city+"<br>");
+			document.write("District: "+dist+"<br>");
+	}
+</script>
+</html>

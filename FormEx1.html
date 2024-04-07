@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Getting Value From Form Controls</title>
+
+	<script type="text/javascript">
+		
+		function testResults(Form){
+			var testVar1 = Form.num1.value;
+			var testVar2 = Form.num2.value;
+			document.write(testVar1 + " " + testVar2);
+		}
+	</script>
+	</head>
+
+	<body>
+		<form name="myForm" action=" " method="get"><br>
+			Enter First Number: 
+			<input type="text" name="num1" value=" "><p>
+				Enter Second Number:
+				<input type="text" name="num1" value=" "><p>
+					<input type="button" name="button" value="Click" onClick="testResults(this.Form)">
+		</form>
+    </body>
+</html>

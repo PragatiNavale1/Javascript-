@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Changing Image SIZE by Rollover</title>
+	<!--TAKE 2 BUTTONS ZOOMIN & ZOOMOUT COMPRESSED & INLARGE THE IMAGE-->
+</head>
+<body>
+	<center>
+		<img src="IMAGES/Matheran1.png" id="image" width="400" height="400"><br><br>
+		<input type="button" name="" value="ZoomOut" onclick="ZoomOut()">
+	    <input type="button" name="" value="ZoomIn" onclick="ZoomIn()">
+	</center>
+</body>
+<script type="text/javascript">
+	
+	var i=document.getElementById("image");
+	var j=10;
+	function ZoomOut()
+	{
+		i.width-=5;
+		i.height-=5;
+		
+	}
+	function ZoomIn()
+	{
+		i.width+=j;
+		i.height+=j;
+		
+	}
+</script>
+</html>

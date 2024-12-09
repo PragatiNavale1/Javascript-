@@ -1,39 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<title>Getting Value From Form Controls</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arithmetic Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
 
-	<script type="text/javascript">
-		
-		function testResults(Form){
-			var var1 = Form.num1.value;
-			var var2 = Form.num2.value;
-			var result;
-			var operator = Form.button.value;
-			if (operator == '+') {
-				result= num1 + num2;
-			} else if(operator == '-') {
-				result= num1 - num2;
-			}else if(operator == '*') {
-				result= num1 * num2;
-			}else{
-				result= num1 / num2;
-			}
-			alert("Answer is: " +result);
-		}
-	</script>
-	</head>
+        .calculator {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
 
-	<body>
-		<form name="myForm" action="" method="GET"><br>
-			Enter First Number: 
-			<input type="text" name="num1" value=""><p>
-				Enter Second Number:
-				<input type="text" name="num1" value=""><p>
-					<input type="button" name="button" value="ADD" onclick="testResults(this.Form)">
-					<input type="button" name="button" value="SUB" onclick="testResults(this.Form)">
-					<input type="button" name="button" value="MUL" onclick="testResults(this.Form)">
-					<input type="button" name="button" value="DIV" onclick="testResults(this.Form)">
-		</form>
-    </body>
+        h2 {
+            text-align: center;
+        }
+
+        .display {
+            width: 100%;
+            height: 40px;
+            font-size: 20px;
+            margin-bottom: 20px;
+            padding: 10px;
+            text-align: right;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            background-color: #f1f1f1;
+            padding: 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        button:active {
+            background-color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <h2>Arithmetic Calculator</h2>
+        <input type="text" id="display" class="display" disabled>
+        <div class="buttons">
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('+')">+</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('-')">-</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('*')">*</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="clearDisplay()">C</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="appendToDisplay('/')">/</button>
+        </div>
+    </div>
+
+    <script>
+        // Function to append numbers or operators to the display
+        function appendToDisplay(value) {
+            document.getElementById('display').value += value;
+        }
+
+        // Function to clear the display
+        function clearDisplay() {
+            document.getElementById('display').value = '';
+        }
+
+        // Function to calculate the result
+        function calculate() {
+            const display = document.getElementById('display');
+            try {
+                // Evaluate the arithmetic expression
+                display.value = eval(display.value);
+            } catch (error) {
+                // In case of invalid expression
+                display.value = 'Error';
+            }
+        }
+    </script>
+</body>
 </html>

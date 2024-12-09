@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Workshop Registration</title>
+    <script>
+        function validateForm() {
+            var name = document.forms["workshopForm"]["name"].value;
+            var email = document.forms["workshopForm"]["email"].value;
+            var phone = document.forms["workshopForm"]["phone"].value;
+            var age = document.forms["workshopForm"]["age"].value;
+            var gender = document.forms["workshopForm"]["gender"].value;
+
+            if (name == "" || email == "" || phone == "" || age == "" || gender== "") 
+            {
+                alert("All fields must be filled out.");
+                return false;
+            }
+        }
+    </script>
+ </head>
+ <body>
+    <h3>Workshop Registration</h3>
+    <form name="workshopForm" action="/submit-workshop" onsubmit="return validateForm()" method="post">
+        Name: <input type="text" name="name"><br><br>
+        Email: <input type="email" name="email"><br><br>
+        Phone: <input type="text" name="phone"><br><br>
+        Age: <input type="number" name="age"><br><br>
+        Gender:
+        <input type="radio" name="gender" value="male"> Male
+        <input type="radio" name="gender" value="female"> Female<br><br>
+        <input type="submit" value="Register">
+    </form>
+ </body>
+ </html>
